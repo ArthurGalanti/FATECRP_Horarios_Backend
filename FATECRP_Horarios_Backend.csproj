@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SeleniumBot</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Selenium.Support" Version="4.8.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.8.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="111.0.5563.6400" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="teste\**" />
+    <Compile Remove="Services\UsersInfos.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="teste\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="teste\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="teste\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="teste\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="teste\appsettings.json" />
+    <_ContentIncludedByDefault Remove="teste\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="teste\obj\teste.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="teste\Properties\launchSettings.json" />
+  </ItemGroup>
+
+</Project>
